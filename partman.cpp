@@ -19,6 +19,10 @@
  *   limitations under the License.
  *
  * This file is part of the gazelle-installer.
+ *   -------------------------------------------
+ *   Modified and adapted for Chimbalix Linux:
+ *   - For more information, see NOTICE-Chimbalix.
+ *   -------------------------------------------
  ***************************************************************************/
 
 #include <algorithm>
@@ -1236,7 +1240,7 @@ void PartMan::formatPartitions()
             cargs.append(dev);
             proc.exec("mkfs.msdos", cargs);
         } else {
-            // Transplanted from minstall.cpp and modified to suit.
+            // Transplanted from cinstall.cpp and modified to suit.
             const QString &format = volume->format;
             QStringList cargs;
             if (format == "btrfs") {

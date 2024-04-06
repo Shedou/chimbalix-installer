@@ -1,0 +1,55 @@
+#Services to include in installer
+#ServiceName = Category, Description
+
+acpi-fakekey = Hardware, Generates key events for ACPI scripts
+acpi-support = Hardware, Advanced Configuration and Power Interface
+acpid = Hardware, Advanced Configuration of Power Interface event daemon
+anacron = Admin, Runs commands periodically
+avahi-daemon = Hardware, Enables programs to publish and discover services and hosts
+bluetooth = Networking, Bluetooth
+cpufrequtils = Hardware, CPU frequency irqbalance
+cron = Admin, Time-based job scheduler
+cups = Printing, Linux and OS X printer service
+cups-browsed = Printing, CUPS Bonjour (zeroconf) printer discovery service
+dbus = Hardware, Message bus daemon
+gpm = Hardware, Mouse event server
+haveged = Hardware, Random number generator
+hddtemp = Hardware, HDD temperature monitor
+network-manager = Networking, Network connections
+nfs-kernel-server = Networking, Linux NFS Network File System server component
+openVPN = Networking, VPN program that creates secure connections
+plymouth = Admin, Plymouth boot splash
+rsync = Networking, File copying tool
+saned = Hardware, Scanner daemon
+smartmontools = Hardware, S.M.A.R.T. monitoring tools
+ssh = Networking, Secure Shell
+sudo = Admin, Execute a command as another user
+wicd = Networking, Network connections
+zramswap = Admin, compressed swap space in ram
+
+[ru]
+acpi-fakekey = Оборудование, Создает ключевые события для скриптов ACPI
+acpi-support = Оборудование, Демон расширенной конфигурации и событий интерфейса питания
+acpid = Оборудование, Конфигурация демона событий интерфейса энергопотребления
+anacron = Admin, Выполняет команды периодически
+avahi-daemon = Оборудование, Позволяет программам создавать и обнаруживать службы и хосты
+bluetooth = Сеть, Блютуз
+cpufrequtils = Оборудование, Управление частотой CPU и Irqbalance
+cron = Admin, Планировщик заданий, основанный на времени
+cups = Печать, Служба принтера Linux и OS X
+cups-browsed = Печать, Служба общего доступа к принтерам CUPS Bonjour (zeroconf)
+dbus = Оборудование, Демон шины сообщений
+gpm = Оборудование, Сервер событий мыши
+haveged = Оборудование, Генератор случайных чисел
+hddtemp = Оборудование, Контроль температуры жесткого диска
+network-manager = Сеть, Сетевые подключения
+nfs-kernel-server = Сеть, Компонента сервера сетевой файловой системы NFS
+openVPN = Сеть, Программа VPN, которая создает безопасные соединения.
+plymouth = Admin, Загрузочный экран Plymouth
+rsync = Сеть, Утилита копирования файлов
+saned = Оборудование, Демон сканера
+smartmontools = Оборудование, Инструменты проверки S.M.A.R.T. информацию накопителей
+ssh = Сеть, Безопасная оболочка
+sudo = Admin, Выполнить команду от имени другого пользователя
+wicd = Сеть, Сетевые подключения
+zswapram = Админ, Сжатие файла подкачки в оперативной памяти

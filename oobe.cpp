@@ -18,6 +18,10 @@
  *   limitations under the License.
  *
  * This file is part of the gazelle-installer.
+ *   -------------------------------------------
+ *   Modified and adapted for Chimbalix Linux:
+ *   - For more information, see NOTICE-Chimbalix.
+ *   -------------------------------------------
  ***************************************************************************/
 
 #include <utility>
@@ -239,7 +243,7 @@ void Oobe::buildServiceList(QSettings &appconf) noexcept
     gui.treeServices->header()->setMinimumSectionSize(150);
     gui.treeServices->header()->resizeSection(0,150);
 
-    QSettings services_desc("/usr/share/gazelle-installer-data/services.list", QSettings::NativeFormat);
+    QSettings services_desc("/usr/share/chimbalix-installer/data/services.list", QSettings::NativeFormat);
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
     services_desc.setIniCodec("UTF-8");
 #endif
@@ -623,7 +627,7 @@ void Oobe::setUserInfo()
         // rsync home folder
         QString cmd = ("rsync -a --info=name1 /home/demo/ %1"
             " --exclude '.cache' --exclude '.gvfs' --exclude '.dbus' --exclude '.Xauthority' --exclude '.ICEauthority'"
-            " --exclude '.mozilla' --exclude 'Installer.desktop' --exclude 'minstall.desktop' --exclude 'Desktop/antixsources.desktop'"
+            " --exclude '.mozilla' --exclude 'Installer.desktop' --exclude 'cinstall.desktop' --exclude 'Desktop/antixsources.desktop'"
             " --exclude '.idesktop/gazelle.lnk' --exclude '.jwm/menu' --exclude '.icewm/menu' --exclude '.fluxbox/menu'"
             " --exclude '.config/rox.sourceforge.net/ROX-Filer/pb_antiX-fluxbox'"
             " --exclude '.config/rox.sourceforge.net/ROX-Filer/pb_antiX-icewm'"

@@ -3,18 +3,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 DEFINES += QT_DISABLE_DEPRECATED_UP_TO=0x050F00
 
 TEMPLATE = app
-TARGET = minstall
+TARGET = cinstall
 CONFIG += debug_and_release warn_on strict_c++ c++17
 CONFIG(release, debug|release) {
     DEFINES += NDEBUG
     QMAKE_CXXFLAGS += -flto=auto
     QMAKE_LFLAGS += -flto=auto
 }
-TRANSLATIONS += translations/gazelle-installer_en.ts
+TRANSLATIONS += translations/chimbalix-installer_en.ts
 
 FORMS += meinstall.ui
 HEADERS += \
-    minstall.h \
+    cinstall.h \
     autopart.h \
     base.h \
     bootman.h \
@@ -29,7 +29,7 @@ HEADERS += \
     mprocess.h
 SOURCES += \
     app.cpp \
-    minstall.cpp \
+    cinstall.cpp \
     autopart.cpp \
     base.cpp \
     bootman.cpp \

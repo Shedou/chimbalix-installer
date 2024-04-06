@@ -44,7 +44,7 @@ CMakeLists.txt.user*
 debian/.debhelper/
 
 # Exclude debian folder, each distro will use custom debian configuration
-debian
+# debian
 
 # Exclude binary
 minstall

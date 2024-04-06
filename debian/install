@@ -1,0 +1,15 @@
+LICENSE						usr/share/doc/chimbalix-installer
+NOTICE						usr/share/doc/chimbalix-installer
+copyright					usr/share/doc/chimbalix-installer
+locales.template			usr/share/antiX
+cinstall					usr/sbin
+cinstall.desktop			usr/share/applications
+polkit/*					usr/share/polkit-1/actions
+scripts/guess-hwclock		usr/sbin
+scripts/cinstall-launcher	usr/bin
+scripts/oobe				etc/init.d
+translations/*.qm			usr/share/chimbalix-installer/locale
+data/backdrop-textbox.png	usr/share/chimbalix-installer/data
+data/installer.conf			usr/share/chimbalix-installer/data
+data/logo.png				usr/share/chimbalix-installer/data
+data/services.list			usr/share/chimbalix-installer/data

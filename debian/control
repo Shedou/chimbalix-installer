@@ -1,0 +1,34 @@
+Source: chimbalix-installer
+Section: system
+Priority: optional
+Maintainer: Chimbal <chimbalix@gmail.com>
+Build-Depends: 
+	debhelper (>= 10),
+	libzxcvbn-dev,
+	qtbase5-dev, 
+	qttools5-dev-tools
+Standards-Version: 3.9.8
+Homepage: https://github.com/Shedou/chimbalix-installer
+
+Package: chimbalix-installer
+Architecture: any
+Depends: antix-libs,
+         chimbalix-installer-scripts,
+         dosfstools,
+         libzxcvbn0,
+         system-keyboard-qt | fskbsetting,
+         gdisk,
+         grub-efi-amd64-bin [amd64],
+         grub-efi-ia32-bin [amd64],
+         grub-efi-ia32-bin [i386],
+         os-prober [amd64],
+         os-prober [i386],
+         parted,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Replaces: mx-installer, gazelle-installer, gazelle-installer-data-mx
+Conflicts: mx-installer, gazelle-installer, gazelle-installer-data-mx
+Recommends: gparted | partitionmanager, cryptsetup
+Description: Customizable GUI installer for Chimbalix Linux.
+ Based on gazelle-installer.
+ Supports "portsoft" directory.

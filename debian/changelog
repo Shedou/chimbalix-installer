@@ -1,0 +1,8 @@
+chimbalix-installer (1.0) cl; urgency=medium
+
+  * Supports "portsoft" directory
+  * Settings and resources in /usr/share/chimbalix-installer/data
+  * The project has been renamed to avoid name conflicts with the original project "gazelle-installer"
+  * Minor user interface improvements
+
+ -- Chimbal <chimbalix@gmail.com>  Sat, 06 Apr 2024 19:06:00 +0400
