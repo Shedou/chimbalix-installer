@@ -1,6 +1,11 @@
-LICENSE						usr/share/doc/chimbalix-installer
-NOTICE						usr/share/doc/chimbalix-installer
-copyright					usr/share/doc/chimbalix-installer
+LICENSE									usr/share/doc/chimbalix-installer
+NOTICE									usr/share/doc/chimbalix-installer
+NOTICE-Chimbalix						usr/share/doc/chimbalix-installer
+copyright								usr/share/doc/chimbalix-installer
+data/copyright-gazelle-installer-data	usr/share/doc/chimbalix-installer/data
+data/changelog-gazelle-installer-data	usr/share/doc/chimbalix-installer/data
+data/LICENSE							usr/share/doc/chimbalix-installer/data
+data/README.md							usr/share/doc/chimbalix-installer/data
 locales.template			usr/share/antiX
 cinstall					usr/sbin
 cinstall.desktop			usr/share/applications
@@ -9,7 +14,10 @@ scripts/guess-hwclock		usr/sbin
 scripts/cinstall-launcher	usr/bin
 scripts/oobe				etc/init.d
 translations/*.qm			usr/share/chimbalix-installer/locale
+data/license-and-info.txt	usr/share/chimbalix-installer/data
 data/backdrop-textbox.png	usr/share/chimbalix-installer/data
 data/installer.conf			usr/share/chimbalix-installer/data
 data/logo.png				usr/share/chimbalix-installer/data
 data/services.list			usr/share/chimbalix-installer/data
+data/rc.local.install 		usr/share/antiX
+data/live-to-installed 		usr/sbin
