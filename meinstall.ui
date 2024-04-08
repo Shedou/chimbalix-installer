@@ -50,7 +50,7 @@
       <number>8</number>
      </property>
      <property name="childrenCollapsible">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <widget class="QTabWidget" name="tabsMain">
       <property name="sizePolicy">
