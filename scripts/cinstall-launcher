@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Chimbalix Linux chimbalix-installer pkexec wrapper to retain QT environment (based on MX-Linux mx-installer)
+# Chimbalix chimbalix-installer pkexec wrapper to retain QT environment (based on MX-Linux mx-installer)
 # Usage:
 #        cinstall-launcher (formerly cinstall-pkexec)
 # based on mx-pkexec wrapper

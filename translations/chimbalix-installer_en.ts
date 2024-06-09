@@ -1912,7 +1912,7 @@ Please select a different name.</source>
     <name>QObject</name>
     <message>
         <location filename="../app.cpp" line="99"/>
-        <source>Customizable GUI installer for Chimbalix Linux</source>
+        <source>Customizable GUI installer for Chimbalix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

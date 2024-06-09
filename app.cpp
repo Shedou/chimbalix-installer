@@ -14,7 +14,7 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  *   -------------------------------------------
- *   Modified and adapted for Chimbalix Linux:
+ *   Modified and adapted for Chimbalix:
  *   - For more information, see NOTICE-Chimbalix.
  *   -------------------------------------------
  ***************************************************************************/
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
     }
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(QObject::tr("Customizable GUI installer for Chimbalix Linux"));
+    parser.setApplicationDescription(QObject::tr("Customizable GUI installer for Chimbalix"));
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addOptions({{"auto", QObject::tr("Installs automatically using the configuration file (more information below).\n"

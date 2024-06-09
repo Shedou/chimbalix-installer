@@ -1,4 +1,4 @@
-Adapted for Chimbalix Linux.
+Adapted for Chimbalix.
 
 ### Source Project (gazelle-installer-data, 2024-04-03):
 

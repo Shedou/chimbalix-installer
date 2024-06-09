@@ -28,6 +28,6 @@ Depends: antix-libs,
 Replaces: mx-installer, gazelle-installer, gazelle-installer-data-mx
 Conflicts: mx-installer, gazelle-installer, gazelle-installer-data-mx
 Recommends: gparted | partitionmanager, cryptsetup
-Description: Customizable GUI installer for Chimbalix Linux.
+Description: Customizable GUI installer for Chimbalix.
  Based on gazelle-installer.
  Supports "portsoft" directory.

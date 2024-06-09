@@ -19,7 +19,7 @@
  *
  * This file is part of the gazelle-installer.
  *   -------------------------------------------
- *   Modified and adapted for Chimbalix Linux:
+ *   Modified and adapted for Chimbalix:
  *   - For more information, see NOTICE-Chimbalix.
  *   -------------------------------------------
  ****************************************************************************/

@@ -9,7 +9,7 @@ NoDisplay=true
 Hidden=false
 
 Name=Install Chimbalix
-Comment=Adapted Gazelle Installer for Chimbalix Linux
+Comment=Adapted Gazelle Installer for Chimbalix
 #GenericName=
 
 Icon=/usr/share/chimbalix-installer/data/logo.png
@@ -29,5 +29,5 @@ StartupNotify=false
 # FOR TRANSLATORS! Please! Do not translate the app NAME, such as "FeatherPad".
 Name[ru]=Установить Chimbalix
 Name[ru_RU]=Установить Chimbalix
-Comment[ru]=Адаптированный Gazelle Installer для Chimbalix Linux
-Comment[ru_RU]=Адаптированный Gazelle Installer для Chimbalix Linux
+Comment[ru]=Адаптированный Gazelle Installer для Chimbalix
+Comment[ru_RU]=Адаптированный Gazelle Installer для Chimbalix

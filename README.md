@@ -1,7 +1,7 @@
 chimbalix-installer
 ============
 
-Customizable GUI installer adapted for [Chimbalix Linux](https://github.com/Shedou/Chimbalix).
+Customizable GUI installer adapted for [Chimbalix](https://github.com/Shedou/Chimbalix).
 
 Supports "portsoft" directory.
 

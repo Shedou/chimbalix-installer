@@ -15,7 +15,7 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  *   -------------------------------------------
- *   Modified and adapted for Chimbalix Linux:
+ *   Modified and adapted for Chimbalix:
  *   - For more information, see NOTICE-Chimbalix.
  *   -------------------------------------------
  ****************************************************************************/
