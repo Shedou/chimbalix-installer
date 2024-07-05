@@ -47,7 +47,7 @@ debian/.debhelper/
 debian
 
 # Exclude binary
-minstall
+cinstall
 
 # Exclude build folder
 debs

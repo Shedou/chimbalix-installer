@@ -1,0 +1,66 @@
+chimbalix-installer-scripts (1.0) cl; urgency=medium
+
+  * Configuration files and resources have been removed.
+  * The project has been renamed to avoid name conflicts with the original project "gazelle-installer-data"
+
+ -- Chimbal <chimbalix@gmail.com>  Sat, 06 Apr 2024 19:05:00 +0400
+
+gazelle-installer-data (21.01) mx; urgency=medium
+
+  * update installer.conf
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 21 Jan 2021 20:41:24 -0500
+
+gazelle-installer-data (19.11) mx; urgency=medium
+
+  * generic logo and backgrounds 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 30 Nov 2019 15:06:00 -0500
+
+gazelle-installer-data (19.7) mx; urgency=medium
+
+  * add social media links 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2019 13:20:29 -0400
+
+gazelle-installer-data (19.5.01) mx; urgency=medium
+
+  * syncd services lists 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 28 May 2019 20:29:22 -0500
+
+gazelle-installer-data (19.2.01) mx; urgency=medium
+
+  * added plymouth to services.list 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 22 Feb 2019 22:20:53 -0500
+
+gazelle-installer-data (19.1) mx; urgency=medium
+
+  * updated translations
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 23 Jan 2019 09:28:16 -0500
+
+gazelle-installer-data (18.10) mx; urgency=medium
+
+  * updated translations
+
+ -- Adrian <adrian@mxlinux.org>  Sun, 14 Oct 2018 18:42:57 -0400
+
+gazelle-installer-data (18.5.1) mx; urgency=medium
+
+  * moved rc.local.install and live-to-installed to data package 
+
+ -- dolphinoracle <dolphin@mx>  Tue, 01 May 2018 20:38:43 -0400
+
+gazelle-installer-data (18.4.5) mx; urgency=medium
+
+  * added comments to installer.conf
+
+ -- dolphinoracle <dolphin@mx>  Tue, 17 Apr 2018 21:24:46 -0400
+
+gazelle-installer-data (18.4.4) mx; urgency=medium
+
+  * initial commit
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 17 Apr 2018 20:53:45 -0400

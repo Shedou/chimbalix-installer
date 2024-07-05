@@ -38,6 +38,9 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QTextEdit" name="textHelp">
        <property name="readOnly">
         <bool>true</bool>
@@ -68,11 +71,15 @@
       <layout class="QGridLayout">
        <item row="4" column="4">
         <widget class="QPushButton" name="pushBack">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>Back</string>
          </property>
          <property name="icon">
-          <iconset theme="go-previous"/>
+          <iconset theme="go-previous">
+           <normaloff>.</normaloff>.</iconset>
          </property>
          <property name="shortcut">
           <string>Alt+K</string>
@@ -81,11 +88,15 @@
        </item>
        <item row="4" column="5">
         <widget class="QPushButton" name="pushNext">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>Next</string>
          </property>
          <property name="icon">
-          <iconset theme="go-next"/>
+          <iconset theme="go-next">
+           <normaloff>.</normaloff>.</iconset>
          </property>
          <property name="shortcut">
           <string>Alt+N</string>
@@ -99,6 +110,12 @@
         <spacer>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
          </property>
         </spacer>
        </item>
@@ -121,6 +138,9 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="focusPolicy">
              <enum>Qt::ClickFocus</enum>
@@ -148,16 +168,23 @@
        </item>
        <item row="4" column="0">
         <widget class="QPushButton" name="pushClose">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string>Close</string>
          </property>
          <property name="icon">
-          <iconset theme="window-close"/>
+          <iconset theme="window-close">
+           <normaloff>.</normaloff>.</iconset>
          </property>
         </widget>
        </item>
        <item row="2" column="0" colspan="6">
         <widget class="QStackedWidget" name="widgetStack">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
          <widget class="QLabel" name="labelSplash">
           <property name="font">
            <font>
@@ -225,6 +252,7 @@
                  <widget class="QLabel" name="labelKeyboardSettings">
                   <property name="font">
                    <font>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -240,6 +268,7 @@
                  <widget class="QLabel" name="labelKeyboard1">
                   <property name="font">
                    <font>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -255,6 +284,7 @@
                  <widget class="QLabel" name="labelKeyboard3">
                   <property name="font">
                    <font>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -274,10 +304,19 @@
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                  </spacer>
                 </item>
                 <item row="6" column="1" colspan="3">
                  <widget class="QPushButton" name="pushSetKeyboard">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>Change Keyboard Settings</string>
                   </property>
@@ -287,6 +326,7 @@
                  <widget class="QLabel" name="labelKeyboard2">
                   <property name="font">
                    <font>
+                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -302,6 +342,12 @@
                  <spacer>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
                   </property>
                  </spacer>
                 </item>
@@ -334,6 +380,12 @@
              <property name="orientation">
               <enum>Qt::Vertical</enum>
              </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
             </spacer>
            </item>
            <item row="0" column="0" colspan="2">
@@ -356,6 +408,9 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Regular install using the entire disk</string>
                 </property>
@@ -368,6 +423,9 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
                  <string>Customize the disk layout</string>
@@ -388,7 +446,11 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QComboBox" name="comboDisk"/>
+                  <widget class="QComboBox" name="comboDisk">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                  </widget>
                  </item>
                  <item row="2" column="1">
                   <widget class="QFrame" name="boxSliderPart">
@@ -536,6 +598,9 @@ QSlider::handle:horizontal:disabled {
                  </item>
                  <item row="4" column="1">
                   <widget class="QCheckBox" name="checkHibernationReg">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="text">
                     <string>Enable hibernation support</string>
                    </property>
@@ -543,6 +608,9 @@ QSlider::handle:horizontal:disabled {
                  </item>
                  <item row="3" column="1">
                   <widget class="QCheckBox" name="checkEncryptAuto">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="text">
                     <string>Encrypt</string>
                    </property>
@@ -585,19 +653,87 @@ QSlider::handle:horizontal:disabled {
               <property name="spacing">
                <number>0</number>
               </property>
-              <item row="1" column="2">
-               <widget class="QToolButton" name="pushPartClear">
+              <item row="0" column="0" rowspan="11" colspan="16">
+               <widget class="MTreeView" name="treePartitions"/>
+              </item>
+              <item row="11" column="15">
+               <widget class="QToolButton" name="pushPartManRun">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="toolTip">
-                 <string>Mark the selected drive to be cleared for a new layout.</string>
+                 <string>Run the partition management application of this operating system.</string>
                 </property>
                 <property name="icon">
                  <iconset resource="images.qrc">
-                  <normaloff>:/edit-clear-all</normaloff>:/edit-clear-all</iconset>
+                  <normaloff>:/partitionmanager</normaloff>:/partitionmanager</iconset>
                 </property>
                </widget>
               </item>
-              <item row="5" column="2">
+              <item row="11" column="0">
+               <widget class="QToolButton" name="pushPartReload">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="toolTip">
+                 <string>Query the operating system and reload the layouts of all drives.</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="images.qrc">
+                  <normaloff>:/view-refresh</normaloff>:/view-refresh</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="3">
+               <widget class="QToolButton" name="pushPartRemove">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="toolTip">
+                 <string>Remove an existing entry from the layout. This only works with entries to a new layout.</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="images.qrc">
+                  <normaloff>:/list-remove</normaloff>:/list-remove</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="2">
+               <widget class="QToolButton" name="pushPartAdd">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="toolTip">
+                 <string>Add a new partition entry. This only works with a new layout.</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="images.qrc">
+                  <normaloff>:/list-add</normaloff>:/list-add</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="13">
+               <widget class="QToolButton" name="pushAdvancedFields">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="toolTip">
+                 <string>Show advanced fields.</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="images.qrc">
+                  <normaloff>:/advanced-fields</normaloff>:/advanced-fields</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="12">
                <widget class="QToolButton" name="pushGrid">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="toolTip">
                  <string>Show Grid</string>
                 </property>
@@ -613,78 +749,17 @@ QSlider::handle:horizontal:disabled {
                 </property>
                </widget>
               </item>
-              <item row="0" column="0" rowspan="13" colspan="2">
-               <widget class="MTreeView" name="treePartitions"/>
-              </item>
-              <item row="12" column="2">
-               <widget class="QToolButton" name="pushPartManRun">
+              <item row="11" column="5">
+               <widget class="QToolButton" name="pushPartClear">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="toolTip">
-                 <string>Run the partition management application of this operating system.</string>
+                 <string>Mark the selected drive to be cleared for a new layout.</string>
                 </property>
                 <property name="icon">
                  <iconset resource="images.qrc">
-                  <normaloff>:/partitionmanager</normaloff>:/partitionmanager</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="2">
-               <widget class="QToolButton" name="pushPartRemove">
-                <property name="toolTip">
-                 <string>Remove an existing entry from the layout. This only works with entries to a new layout.</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/list-remove</normaloff>:/list-remove</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="2">
-               <widget class="QToolButton" name="pushPartReload">
-                <property name="toolTip">
-                 <string>Query the operating system and reload the layouts of all drives.</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/view-refresh</normaloff>:/view-refresh</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="2">
-               <spacer>
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-               </spacer>
-              </item>
-              <item row="4" column="2">
-               <spacer>
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-               </spacer>
-              </item>
-              <item row="2" column="2">
-               <widget class="QToolButton" name="pushPartAdd">
-                <property name="toolTip">
-                 <string>Add a new partition entry. This only works with a new layout.</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/list-add</normaloff>:/list-add</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QToolButton" name="pushAdvancedFields">
-                <property name="toolTip">
-                 <string>Show advanced fields.</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/advanced-fields</normaloff>:/advanced-fields</iconset>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
+                  <normaloff>:/edit-clear-all</normaloff>:/edit-clear-all</iconset>
                 </property>
                </widget>
               </item>
@@ -754,6 +829,12 @@ QSlider::handle:horizontal:disabled {
             <spacer>
              <property name="orientation">
               <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
             </spacer>
            </item>
@@ -827,6 +908,9 @@ QSlider::handle:horizontal:disabled {
                   <height>0</height>
                  </size>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="mouseTracking">
                  <bool>true</bool>
                 </property>
@@ -861,6 +945,9 @@ QSlider::handle:horizontal:disabled {
                   <height>0</height>
                  </size>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="toolTip">
                  <string>EFI System Partition</string>
                 </property>
@@ -873,6 +960,12 @@ QSlider::handle:horizontal:disabled {
                <spacer>
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
                 </property>
                </spacer>
               </item>
@@ -889,6 +982,9 @@ QSlider::handle:horizontal:disabled {
                   <width>80</width>
                   <height>0</height>
                  </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="toolTip">
                  <string>Partition Boot Record</string>
@@ -935,6 +1031,9 @@ QSlider::handle:horizontal:disabled {
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                </widget>
               </item>
              </layout>
@@ -944,6 +1043,12 @@ QSlider::handle:horizontal:disabled {
             <spacer>
              <property name="orientation">
               <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
             </spacer>
            </item>
@@ -1016,6 +1121,9 @@ QSlider::handle:horizontal:disabled {
               </item>
               <item row="3" column="0" colspan="5">
                <widget class="QCheckBox" name="checkHibernation">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Enable hibernation support</string>
                 </property>
@@ -1158,11 +1266,17 @@ QSlider::handle:horizontal:disabled {
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
                 <property name="text">
                  <string>SaMBa Server for MS Networking</string>
                 </property>
                 <property name="checked">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -1223,6 +1337,12 @@ QSlider::handle:horizontal:disabled {
                 <property name="sizeType">
                  <enum>QSizePolicy::Fixed</enum>
                 </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
                </spacer>
               </item>
              </layout>
@@ -1232,6 +1352,12 @@ QSlider::handle:horizontal:disabled {
             <spacer>
              <property name="orientation">
               <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
             </spacer>
            </item>
@@ -1278,19 +1404,15 @@ QSlider::handle:horizontal:disabled {
               <property name="spacing">
                <number>6</number>
               </property>
-              <item row="3" column="2">
-               <widget class="QRadioButton" name="radioClock12">
+              <item row="2" column="0" colspan="4">
+               <widget class="QCheckBox" name="checkLocalClock">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
-                 <string notr="true">1:57 PM</string>
+                 <string>System clock uses local time</string>
                 </property>
                </widget>
-              </item>
-              <item row="3" column="3">
-               <spacer>
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </spacer>
               </item>
               <item row="3" column="0">
                <widget class="QLabel" name="labelClockFormat">
@@ -1301,6 +1423,9 @@ QSlider::handle:horizontal:disabled {
               </item>
               <item row="3" column="1">
                <widget class="QRadioButton" name="radioClock24">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string notr="true">13:57</string>
                 </property>
@@ -1309,12 +1434,32 @@ QSlider::handle:horizontal:disabled {
                 </property>
                </widget>
               </item>
-              <item row="0" column="0" colspan="4">
-               <layout class="QHBoxLayout">
-                <property name="spacing">
-                 <number>0</number>
+              <item row="3" column="3">
+               <spacer>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
-                <item>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="2">
+               <widget class="QRadioButton" name="radioClock12">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string notr="true">1:57 PM</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="4">
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="0" column="0">
                  <widget class="QLabel" name="labelTimezone">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1327,24 +1472,7 @@ QSlider::handle:horizontal:disabled {
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <spacer>
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="comboTimeArea">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                 </widget>
-                </item>
-                <item>
+                <item row="0" column="2">
                  <widget class="QComboBox" name="comboTimeZone">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
@@ -1352,19 +1480,41 @@ QSlider::handle:horizontal:disabled {
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="sizeAdjustPolicy">
                    <enum>QComboBox::AdjustToContents</enum>
                   </property>
                  </widget>
                 </item>
+                <item row="0" column="3">
+                 <spacer>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="comboTimeArea">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                 </widget>
+                </item>
                </layout>
-              </item>
-              <item row="2" column="0" colspan="4">
-               <widget class="QCheckBox" name="checkLocalClock">
-                <property name="text">
-                 <string>System clock uses local time</string>
-                </property>
-               </widget>
               </item>
              </layout>
             </widget>
@@ -1377,60 +1527,13 @@ QSlider::handle:horizontal:disabled {
              <property name="sizeType">
               <enum>QSizePolicy::Expanding</enum>
              </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
             </spacer>
-           </item>
-           <item row="0" column="0">
-            <widget class="QGroupBox" name="boxLocale">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string>Localization Defaults</string>
-             </property>
-             <layout class="QGridLayout">
-              <property name="leftMargin">
-               <number>9</number>
-              </property>
-              <property name="topMargin">
-               <number>9</number>
-              </property>
-              <property name="rightMargin">
-               <number>9</number>
-              </property>
-              <property name="bottomMargin">
-               <number>9</number>
-              </property>
-              <property name="spacing">
-               <number>6</number>
-              </property>
-              <item row="0" column="1">
-               <widget class="QComboBox" name="comboLocale">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="labelLocale">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string>Locale:</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
            </item>
            <item row="2" column="0">
             <widget class="QGroupBox" name="boxServicesAdvanced">
@@ -1464,6 +1567,9 @@ QSlider::handle:horizontal:disabled {
                   <height>27</height>
                  </size>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="toolTip">
                  <string>Adjust which services should run at startup</string>
                 </property>
@@ -1476,6 +1582,94 @@ QSlider::handle:horizontal:disabled {
                <spacer>
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="boxLocale">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Localization Defaults</string>
+             </property>
+             <layout class="QGridLayout">
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <property name="rightMargin">
+               <number>9</number>
+              </property>
+              <property name="bottomMargin">
+               <number>9</number>
+              </property>
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="labelLocale">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Locale:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="comboLocale">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
                 </property>
                </spacer>
               </item>
@@ -1499,6 +1693,19 @@ QSlider::handle:horizontal:disabled {
             <number>0</number>
            </property>
            <item row="4" column="0">
+            <spacer>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="0">
             <widget class="QCheckBox" name="checkSaveDesktop">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
@@ -1506,11 +1713,46 @@ QSlider::handle:horizontal:disabled {
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
              <property name="toolTip">
               <string>Desktop modifications made in the live environment will be carried over to the installed OS</string>
              </property>
              <property name="text">
               <string>Save live desktop changes</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="checkAutoLogin">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Autologin</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -1683,23 +1925,16 @@ QSlider::handle:horizontal:disabled {
              </layout>
             </widget>
            </item>
-           <item row="3" column="0">
-            <widget class="QCheckBox" name="checkAutoLogin">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Autologin</string>
-             </property>
-            </widget>
-           </item>
            <item row="5" column="0">
-            <spacer>
+            <spacer name="verticalSpacer_2">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
              </property>
             </spacer>
            </item>
@@ -1737,6 +1972,9 @@ QSlider::handle:horizontal:disabled {
               </item>
               <item>
                <widget class="QRadioButton" name="radioOldHomeUse">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Re-use it for this installation</string>
                 </property>
@@ -1744,6 +1982,9 @@ QSlider::handle:horizontal:disabled {
               </item>
               <item>
                <widget class="QRadioButton" name="radioOldHomeSave">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Rename it and create a new directory</string>
                 </property>
@@ -1751,6 +1992,9 @@ QSlider::handle:horizontal:disabled {
               </item>
               <item>
                <widget class="QRadioButton" name="radioOldHomeDelete">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Delete it and create a new directory</string>
                 </property>
@@ -1760,6 +2004,12 @@ QSlider::handle:horizontal:disabled {
                <spacer>
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
                 </property>
                </spacer>
               </item>
@@ -1840,6 +2090,9 @@ QSlider::handle:horizontal:disabled {
              <layout class="QGridLayout">
               <item row="0" column="0">
                <widget class="QCheckBox" name="checkExitReboot">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="text">
                  <string>Automatically reboot the system when the installer is closed</string>
                 </property>
@@ -1914,11 +2167,6 @@ QSlider::handle:horizontal:disabled {
   <tabstop>sliderPart</tabstop>
   <tabstop>radioCustomPart</tabstop>
   <tabstop>treePartitions</tabstop>
-  <tabstop>pushPartClear</tabstop>
-  <tabstop>pushPartAdd</tabstop>
-  <tabstop>pushPartRemove</tabstop>
-  <tabstop>pushPartReload</tabstop>
-  <tabstop>pushPartManRun</tabstop>
   <tabstop>boxBoot</tabstop>
   <tabstop>radioBootMBR</tabstop>
   <tabstop>radioBootPBR</tabstop>
@@ -1932,7 +2180,6 @@ QSlider::handle:horizontal:disabled {
   <tabstop>checkLocalClock</tabstop>
   <tabstop>radioClock24</tabstop>
   <tabstop>radioClock12</tabstop>
-  <tabstop>comboTimeZone</tabstop>
   <tabstop>pushServices</tabstop>
   <tabstop>textUserName</tabstop>
   <tabstop>textUserPass</tabstop>
@@ -1950,7 +2197,6 @@ QSlider::handle:horizontal:disabled {
   <tabstop>pushClose</tabstop>
   <tabstop>textHelp</tabstop>
   <tabstop>listLog</tabstop>
-  <tabstop>comboTimeArea</tabstop>
   <tabstop>radioOldHomeUse</tabstop>
   <tabstop>radioOldHomeSave</tabstop>
   <tabstop>radioOldHomeDelete</tabstop>
@@ -1959,4 +2205,5 @@ QSlider::handle:horizontal:disabled {
  <resources>
   <include location="images.qrc"/>
  </resources>
+ <connections/>
 </ui>
