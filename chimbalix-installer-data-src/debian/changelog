@@ -1,0 +1,187 @@
+gazelle-installer-data (23.08mx23) mx; urgency=medium
+
+  * Revert LUKS compatibility setting.
+
+ -- Adrian <adrian@mxlinux.org>  Sat, 05 Aug 2023 18:21:11 -0400
+
+gazelle-installer-data (23.07.03mx23) mx; urgency=medium
+
+  * LUKS compatibility setting.
+
+ -- Adrian <adrian@mxlinux.org>  Thu, 20 Jul 2023 15:48:04 -0400
+
+gazelle-installer-data (23.07.02mx23) mx; urgency=medium
+
+  * new services format
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 06 Jul 2023 00:06:52 -0400
+
+gazelle-installer-data (23.07.01mx23) mx; urgency=medium
+
+  * add zswapram 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 03 Jul 2023 10:00:17 -0400
+
+gazelle-installer-data (23.05.01mx23) mx; urgency=medium
+
+  * update icon 
+  * update backdrop
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 16 May 2023 20:32:00 -0400
+
+gazelle-installer-data (23.02.01mx23) mx; urgency=medium
+
+  * update version string
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Feb 2023 09:11:50 -0500
+
+gazelle-installer-data (22.04.01mx21) mx; urgency=medium
+
+  * add SPLASH_THROBBER variable
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 17 Apr 2022 21:12:59 -0400
+
+gazelle-installer-data (22.03.01mx21) mx; urgency=medium
+
+  * remove systemd generators set disabled by mx-remaster 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 19 Mar 2022 17:14:06 -0400
+
+gazelle-installer-data (21.07.01mx21) mx; urgency=medium
+
+  * don't clear /media from live-to-installed 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 01 Aug 2021 00:01:49 -0400
+
+gazelle-installer-data (21.02.02mx21) mx; urgency=medium
+
+  * remove minstall.desktop from /etc/skel/Desktop, if present
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 27 Feb 2021 21:09:04 -0500
+
+gazelle-installer-data (21.02.01mx21) mx; urgency=medium
+
+  * first bullseye build 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 17 Feb 2021 22:56:13 -0500
+
+gazelle-installer-data (21.01.01) mx; urgency=medium
+
+  * update installer.conf 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 21 Jan 2021 20:37:50 -0500
+
+gazelle-installer-data (20.11.02) mx; urgency=medium
+
+  * remove gazelle.lnk from user home folders 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 01 Dec 2020 06:51:09 -0500
+
+gazelle-installer-data (20.11.01) mx; urgency=medium
+
+  * remove installer gazelle.lnk idesk link (mx-fluxbox)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 27 Nov 2020 14:20:19 -0500
+
+gazelle-installer-data (20.06) mx; urgency=medium
+
+  * remove autologin from sddm.conf
+
+ -- Adrian <adrian@mxlinux.org>  Mon, 15 Jun 2020 21:34:08 -0400
+
+gazelle-installer-data (20.01.01) mx; urgency=medium
+
+  * remove installer from desktops of all users
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 13 Jan 2020 20:21:29 -0500
+
+gazelle-installer-data (19.09.01) mx; urgency=medium
+
+  * refresh translatons
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 28 Sep 2019 15:07:02 -0400
+
+gazelle-installer-data (19.07.01) mx; urgency=medium
+
+  * social links now a list of links 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2019 22:22:12 -0400
+
+gazelle-installer-data (19.07) mx; urgency=medium
+
+  * add social media links 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2019 10:41:23 -0400
+
+gazelle-installer-data (19.06) mx; urgency=medium
+
+  * mx 19
+  * sync with upstream 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 28 May 2019 20:36:03 -0400
+
+gazelle-installer-data (19.05.01) mx; urgency=medium
+
+  * revised for 18.3 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 08 May 2019 20:50:40 -0400
+
+gazelle-installer-data (19.04.01) mx; urgency=medium
+
+  * revised for 18.2
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 04 Apr 2019 21:54:44 -0400
+
+gazelle-installer-data (19.02.02) mx; urgency=medium
+
+  * catchup with gazelle-installer translations service.list
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 13 Feb 2019 10:19:12 -0500
+
+gazelle-installer-data (19.02.01) mx; urgency=medium
+
+  * update version number 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 09 Feb 2019 08:21:44 -0500
+ 
+gazelle-installer-data (19.1) mx; urgency=medium
+
+  * updated translations
+
+ -- Adrian <adrian@mxlinux.org>  Wed, 23 Jan 2019 09:28:16 -0500
+
+gazelle-installer-data (18.12) mx; urgency=medium
+
+  * updated translations (services.list) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 01 Dec 2018 09:04:24 -0500
+
+gazelle-installer-data (18.11) mx; urgency=medium
+
+  * updated version to mx18
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 23 Nov 2018 17:44:42 -0500
+
+gazelle-installer-data (18.10) mx; urgency=medium
+
+  * update translations 
+
+ -- dolphin <dolphinoracle@gmail.com>  Sun, 14 Oct 2018 18:53:50 -0400
+
+gazelle-installer-data (18.5.1) mx; urgency=medium
+
+  * moved rc.local.install and live-to-installed to data package 
+
+ -- dolphinoracle <dolphin@mx>  Tue, 01 May 2018 20:38:43 -0400
+
+gazelle-installer-data (18.4.5) mx; urgency=medium
+
+  * added comments to installer.conf
+
+ -- dolphinoracle <dolphin@mx>  Tue, 17 Apr 2018 21:24:46 -0400
+
+gazelle-installer-data (18.4.4) mx; urgency=medium
+
+  * initial commit
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 17 Apr 2018 20:53:45 -0400
