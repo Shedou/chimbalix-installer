@@ -17,7 +17,7 @@ Check folder: /usr/share/chimbalix-installer/data
 
 ### Source Project (2024-09-14):
 
-Adapted sources from MX Linux Repository:
+Sources from MX Linux Repository:
 
 https://mirror.truenetwork.ru/mxlinux/mx/repo/pool/main/g/gazelle-installer/gazelle-installer_24.05.01mx23.tar.xz
 
