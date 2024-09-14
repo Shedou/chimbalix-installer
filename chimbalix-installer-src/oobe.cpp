@@ -239,7 +239,7 @@ void Oobe::buildServiceList(QSettings &appconf) noexcept
     gui.treeServices->header()->setMinimumSectionSize(150);
     gui.treeServices->header()->resizeSection(0,150);
 
-    QSettings services_desc("/usr/share/chmbalix-installer-data/services.list", QSettings::NativeFormat);
+    QSettings services_desc("/usr/share/chimbalix-installer-data/services.list", QSettings::NativeFormat);
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
     services_desc.setIniCodec("UTF-8");
 #endif
