@@ -12,9 +12,6 @@ Run in a terminal (inside the source folder):
 
 fakeroot ./debian/rules binary
 
-### Settings:
-Check folder: /usr/share/chimbalix-installer/data
-
 ### Source Project (2024-09-14):
 
 Sources from MX Linux Repository:
