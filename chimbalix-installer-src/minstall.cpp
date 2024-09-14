@@ -72,7 +72,7 @@ static const QRegularExpression configCensor("Encryption\\/Pass|User\\/.*Pass/i"
 
 MInstall::MInstall(QSettings &acfg, const QCommandLineParser &args, const QString &cfgfile) noexcept
     : proc(this), appConf(acfg), appArgs(args), configFile(cfgfile),
-    helpBackdrop("/usr/share/gazelle-installer-data/backdrop-textbox.png")
+    helpBackdrop("/usr/share/chimbalix-installer-data/backdrop-textbox.png")
 {
     gui.setupUi(this);
     gui.listLog->addItem("Version " VERSION);
@@ -201,10 +201,7 @@ void MInstall::startup()
             link_block += "\n\n" + tr(link.toUtf8().constData()) + ": " + appConf.value(link).toString();
         }
         appConf.endGroup();
-        gui.textReminders->setPlainText(tr("Support %1\n\n"
-            "%1 is supported by people like you. Some help others at the support forum - %2,"
-            " or translate help files into different languages, or make suggestions,"
-            " write documentation, or help test new software.").arg(PROJECTNAME, PROJECTFORUM)
+        gui.textReminders->setPlainText(tr("Great, %1 is installed!").arg(PROJECTNAME)
             + "\n" + link_block);
 
         // Password box setup
@@ -245,7 +242,7 @@ void MInstall::startup()
     }
     oobe->stashServices(true);
 
-    gui.textCopyright->setPlainText(tr("%1 is an independent Linux distribution based on Debian Stable.\n\n"
+    gui.textCopyright->setPlainText(tr("%1 is an independent Linux distribution based on MX Linux (Debian Stable).\n\n"
         "%1 uses some components from MEPIS Linux which are released under an Apache free license."
         " Some MEPIS components have been modified for %1.\n\nEnjoy using %1").arg(PROJECTNAME));
     gotoPage(Step::TERMS);
@@ -459,7 +456,7 @@ void MInstall::pretendNextPhase() noexcept
 void MInstall::manageConfig(enum ConfigAction mode) noexcept
 {
     if (mode == CONFIG_SAVE) {
-        configFile = pretend ? "./minstall.conf" : "/mnt/antiX/etc/minstall.conf";
+        configFile = pretend ? "./cinstall.conf" : "/mnt/antiX/etc/cinstall.conf";
     }
     MSettings config(configFile, this);
 
@@ -507,8 +504,8 @@ void MInstall::manageConfig(enum ConfigAction mode) noexcept
     if (mode == CONFIG_SAVE && !pretend) {
         config.sync();
         config.dumpDebug(&configCensor);
-        QFile::remove("/etc/minstalled.conf");
-        QFile::copy(configFile, "/etc/minstalled.conf");
+        QFile::remove("/etc/cinstalled.conf");
+        QFile::copy(configFile, "/etc/cinstalled.conf");
         chmod(configFile.toUtf8().constData(), 0600);
     }
 
@@ -897,12 +894,7 @@ void MInstall::pageDisplayed(int next) noexcept
 
     case Step::END:
         gui.pushClose->setEnabled(false);
-        gui.textHelp->setText(tr("<p><b>Congratulations!</b><br/>You have completed the installation of %1</p>"
-                             "<p><b>Finding Applications</b><br/>There are hundreds of excellent applications installed with %1 "
-                             "The best way to learn about them is to browse through the Menu and try them. "
-                             "Many of the apps were developed specifically for the %1 project. "
-                             "These are shown in the main menus. "
-                             "<p>In addition %1 includes many standard Linux applications that are run only from the command line and therefore do not show up in the Menu.</p>").arg(PROJECTNAME)
+        gui.textHelp->setText(tr("<p><b>Congratulations!</b><br/>You have completed the installation of %1</p>").arg(PROJECTNAME)
                              + "<p><b>" + tr("Enjoy using %1").arg(PROJECTNAME) + "</b></p>");
         break;
     }
@@ -1099,9 +1091,9 @@ void MInstall::cleanup()
     proc.log(__PRETTY_FUNCTION__, MProcess::LOG_MARKER);
     if (pretend) return;
 
-    const char *destlog = "/mnt/antiX/var/log/minstall.log";
+    const char *destlog = "/mnt/antiX/var/log/cinstall.log";
     QFile::remove(destlog);
-    bool ok = QFile::copy("/var/log/minstall.log", destlog);
+    bool ok = QFile::copy("/var/log/cinstall.log", destlog);
     if (ok) ok = (chmod(destlog, 0400) == 0);
     if (!ok) proc.log("Failed to copy the installation log to the target.", MProcess::LOG_FAIL);
 
@@ -1139,36 +1131,36 @@ void MInstall::progressUpdate(int value) noexcept
     switch(newtip)
     {
     case 0:
-        gui.textTips->setText(tr("<p><b>Getting Help</b><br/>"
-                             "Basic information about %1 is at %2.</p><p>"
-                             "There are volunteers to help you at the %3 forum, %4</p>"
-                             "<p>If you ask for help, please remember to describe your problem and your computer "
-                             "in some detail. Usually statements like 'it didn't work' are not helpful.</p>").arg(PROJECTNAME, PROJECTURL, PROJECTSHORTNAME, PROJECTFORUM));
+        gui.textTips->setText(tr("<p><b>If something happened...</b></p>"
+                             "<p>Please save the bootable USB drive with the %1, it will help save important information and restore the system in case of unexpected problems.</p>"
+                             "<p><b>PortSoft</b></p>"
+                             "<p>%1 has a base PortSoft directory designed for installing a variety of applications without the restrictions that are so typical for Linux distributions.</p>"
+                             "<p><b>Menu Start</b></p>"
+                             "<p>The %1 has a basic stable Applications menu section, which allows developers to freely create full-fledged sections for their applications.</p>"
+                             "<p>There is also a special section for compatibility with classic Linux applications, organized according to the XDG specifications.</p>").arg(PROJECTNAME));
         break;
 
     case 1:
-        gui.textTips->setText(tr("<p><b>Repairing Your Installation</b><br/>"
-                             "If %1 stops working from the hard drive, sometimes it's possible to fix the problem by booting from LiveDVD or LiveUSB and running one of the included utilities in %1 or by using one of the regular Linux tools to repair the system.</p>"
-                             "<p>You can also use your %1 LiveDVD or LiveUSB to recover data from MS-Windows systems!</p>").arg(PROJECTNAME));
+        gui.textTips->setText(tr("<p><b>Godot Engine</b></p>"
+                             "<p>The %1 comes with Godot Engine installed (v3.5.3), which allows you to develop games/applications immediately after installation.</p>"
+                             "<p>Godot Engine Home Page: https://godotengine.org</p>"
+                             "<p>There is also an executable file godot353_shared, which, with certain skills, allows you to develop very light applications.</p>").arg(PROJECTNAME));
         break;
 
     case 3:
-        gui.textTips->setText(tr("<p><b>Adjusting Your Sound Mixer</b><br/>"
-                             " %1 attempts to configure the sound mixer for you but sometimes it will be "
-                             "necessary for you to turn up volumes and unmute channels in the mixer "
-                             "in order to hear sound.</p> "
-                             "<p>The mixer shortcut is located in the menu. Click on it to open the mixer. </p>").arg(PROJECTNAME));
+        gui.textTips->setText(tr("<p><b>Applications</b></p>"
+                             "<p>The %1 has pre-installed applications, such as the Audacity audio editor, OBS Studio for recording and streaming, and others.</p>").arg(PROJECTNAME));
         break;
 
     case 4:
-        gui.textTips->setText(tr("<p><b>Keep Your Copy of %1 up-to-date</b><br/>"
-                             "For more information and updates please visit</p><p> %2</p>").arg(PROJECTNAME, PROJECTFORUM));
+        gui.textTips->setText(tr("<p><b>Updates</b></p>"
+                             "<p>In the %1, checking for updates is disabled by default, but you can enable it if necessary.</p>"
+                             "<p>Thoughtless installation of updates can disrupt the system! It works - don't touch it!</p>").arg(PROJECTNAME));
         break;
 
     default:
-        gui.textTips->setText(tr("<p><b>Special Thanks</b><br/>Thanks to everyone who has chosen to support %1 with their time, money, suggestions, work, praise, ideas, promotion, and/or encouragement.</p>"
-                             "<p>Without you there would be no %1.</p>"
-                             "<p>%2 Dev Team</p>").arg(PROJECTNAME, PROJECTSHORTNAME));
+        gui.textTips->setText(tr("<p><b>Choice</b></p>"
+                             "<p>Thanks for choosing %1, project page - %2, project forum - %4</p>").arg(PROJECTNAME, PROJECTURL, PROJECTSHORTNAME, PROJECTFORUM));
         break;
     }
 }

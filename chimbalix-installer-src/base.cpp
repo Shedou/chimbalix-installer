@@ -44,7 +44,7 @@ Base::Base(MProcess &mproc, PartMan &pman, const QSettings &appConf, const QComm
 
     bootSource = "/live/aufs/boot";
     rootSources << "/live/aufs/bin" << "/live/aufs/dev"
-        << "/live/aufs/etc" << "/live/aufs/lib"
+        << "/live/aufs/etc" << "/live/aufs/lib" << "/live/aufs/portsoft"
         << "/live/aufs/media" << "/live/aufs/mnt" << "/live/aufs/root"
         << "/live/aufs/sbin" << "/live/aufs/usr" << "/live/aufs/var" << "/live/aufs/home";
     if (QFileInfo::exists("/live/aufs/libx32")){
@@ -232,7 +232,7 @@ void Base::install()
         proc.shell("mv -f /mnt/antiX/etc/rcS.d/S*virtualbox-guest-x11 /mnt/antiX/etc/rcS.d/K21virtualbox-guest-x11 >/dev/null 2>&1");
     }
 
-    // if POPULATE_MEDIA_MOUNTPOINTS is true in gazelle-installer-data, then use the --mntpnt switch
+    // if POPULATE_MEDIA_MOUNTPOINTS is true in chimbalix-installer-data, then use the --mntpnt switch
     if (populateMediaMounts) {
         proc.shell("make-fstab -O --install=/mnt/antiX --mntpnt=/media");
     } else {

@@ -65,7 +65,7 @@ main() {
     rm_file       etc/*-
     rm_file       lib/udev/rules.d/92-console-font.rules
 
-	rm_file_all_user_home_dirs_desktops  minstall.desktop
+    rm_file_all_user_home_dirs_desktops  cinstall.desktop
     rm_file_all_user_home_dirs_desktops  Installer.desktop
     rm_file_all_user_home_dirs .idesktop/gazelle.lnk
 
@@ -77,7 +77,7 @@ main() {
     rm_dir        etc/init.d/debian
 
     rm_file        etc/skel/Desktop/Installer.desktop
-    rm_file        etc/skel/Desktop/minstall.desktop
+    rm_file        etc/skel/Desktop/cinstall.desktop
     rm_file        etc/skel/.idesktop/gazelle.lnk
     rm_file        usr/share/applications/antix/minstall.desktop
     rm_file        usr/share/applications/antix/antixsources.desktop
@@ -85,8 +85,8 @@ main() {
     rm_file        usr/share/applications/antix/persist_setup.desktop 
     rm_file        usr/share/applications/antix/persist_save.desktop
     rm_file        usr/share/applications/antix/remaster.desktop
-    rm_file		  /etc/systemd/system-generators/systemd-fstab-generator
-    rm_file       /etc/systemd/system-generators/systemd-gpt-auto-generator
+    rm_file        /etc/systemd/system-generators/systemd-fstab-generator
+    rm_file        /etc/systemd/system-generators/systemd-gpt-auto-generator
 
     sed_line      's/^\s*(session\s+[^\s]+\s+pam_lastlog.so).*/\1/' etc/pam.d/login
     sed_line      's/^User=.*/User=/' etc/sddm.conf

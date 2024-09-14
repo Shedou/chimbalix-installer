@@ -1,3 +1,12 @@
+chimbalix-installer (2.0-cl) cl; urgency=medium
+
+  * Based on the source code: gazelle-installer_24.05.01mx23.tar.xz
+  * Supports "portsoft" directory
+  * The project has been renamed to avoid name conflicts with the original project "gazelle-installer"
+  * Minor user interface improvements
+
+ -- Chimbal <chimbalix@gmail.com>  Sat, 14 Sep 2024 18:00:00 +0400
+
 gazelle-installer (24.05.01mx23) mx; urgency=medium
 
   * Fix: turn except=false to ignore grep test fail

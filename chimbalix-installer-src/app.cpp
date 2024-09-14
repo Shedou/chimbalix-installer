@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     if (defskin) a.setStyleSheet("QDialog { border: 2px ridge gray; }");
     a.setApplicationVersion(VERSION);
-    a.setWindowIcon(QIcon("/usr/share/gazelle-installer-data/logo.png"));
+    a.setWindowIcon(QIcon("/usr/share/chimbalix-installer-data/logo.png"));
 
 #if QT_VERSION >= QT_VERSION_CHECK(6,0,0)
     const QString &transpath = QLibraryInfo::path(QLibraryInfo::TranslationsPath);
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
         a.installTranslator(&qtBaseTran);
     }
     QTranslator appTran;
-    if (appTran.load(QLocale::system(), "gazelle-installer", "_", "/usr/share/gazelle-installer/locale")) {
+    if (appTran.load(QLocale::system(), "chimbalix-installer", "_", "/usr/share/chimbalix-installer/locale")) {
         a.installTranslator(&appTran);
     }
 
@@ -100,9 +100,9 @@ int main(int argc, char *argv[])
         {"brave", QObject::tr("Overrules sanity checks on partitions and drives, causing them to be displayed.\n"
             "-- WARNING: this can break things, use it only if you don't care about data on drive.")},
         {{"c" , "config"}, QObject::tr("Load a configuration file as specified by <config-file>.\n"
-            "By default /etc/minstall.conf is used.\n"
+            "By default /etc/cinstall.conf is used.\n"
             "This configuration can be used with --auto for an unattended installation.\n"
-            "The installer creates (or overwrites) /mnt/antiX/etc/minstall.conf and saves a copy to /etc/minstalled.conf for future use.\n"
+            "The installer creates (or overwrites) /mnt/antiX/etc/cinstall.conf and saves a copy to /etc/cinstalled.conf for future use.\n"
             "The installer will not write any passwords or ignored settings to the new configuration file.\n"
             "Please note, this is experimental. Future installer versions may break compatibility with existing configuration files.")},
         {{"f", "poweroff"}, QObject::tr("Shutdown automatically when done installing.")},
@@ -127,17 +127,17 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    QSettings appConf("/usr/share/gazelle-installer-data/installer.conf", QSettings::NativeFormat);
+    QSettings appConf("/usr/share/chimbalix-installer-data/installer.conf", QSettings::NativeFormat);
     a.setApplicationDisplayName(QObject::tr("%1 Installer").arg(appConf.value("PROJECT_NAME").toString()));
 
     // The lock is released when this object is destroyed.
-    QLockFile lockfile("/var/lock/gazelle-installer.lock");
+    QLockFile lockfile("/var/lock/chimbalix-installer.lock");
     if (!parser.isSet("pretend")) {
         // Set Lock or exit if lockfile is present.
         if (!lockfile.tryLock()) {
             QMessageBox::critical(nullptr, QString(),
                 QObject::tr("The installer won't launch because it appears to be running already in the background.\n\n"
-                    "Please close it if possible, or run 'pkill minstall' in terminal."));
+                    "Please close it if possible, or run 'pkill cinstall' in terminal."));
             return EXIT_FAILURE;
         }
         // Alert the user if not running as root.
@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
         if (parser.positionalArguments().size() == 1) { // use config file if passed as argument
             cfgfile = parser.positionalArguments().at(0);
         } else if (parser.isSet("config")) { // use default config file if no argument
-            cfgfile = "/etc/minstall.conf";
+            cfgfile = "/etc/cinstall.conf";
         }
         // give error message and exit if no config file found
         if (! QFile::exists(cfgfile)) {
